@@ -2,7 +2,8 @@
 
 
 ## 打包
-mvn clean package -Dmaven.test.skip=true
+- mvn clean package --settings ./settings.xml -Dmaven.test.skip=true
+> 加--settings ./settings.xml指定maven构建设置
 
 ## 运行（可自定义配置文件路径）
 java -jar target/demo-0.0.1.jar --spring.config.location=config/application.yml
