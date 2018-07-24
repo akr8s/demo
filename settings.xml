@@ -1,0 +1,44 @@
+<?xml version="1.0"?>  
+<settings>  
+<localRepository>demo11</localRepository>  
+    <mirrors>  
+        <mirror>  
+            <id>aliyun-repository</id>  
+            <name>aliyun maven</name>  
+            <url>http://180.200.2.44:8081/repository/aliyun-repository/</url>  
+            <mirrorOf>*</mirrorOf>  
+        </mirror>  
+    </mirrors>  
+  <profiles>  
+    <profile>  
+       <id>nexus</id>   
+        <repositories>  
+            <repository>  
+                <id>nexus</id>  
+                <name>local private nexus</name>  
+                <url>https://maven.oschina.net/content/groups/public/</url>  
+                <releases>  
+                    <enabled>true</enabled>  
+                </releases>  
+                <snapshots>  
+                    <enabled>false</enabled>  
+                </snapshots>  
+            </repository>  
+        </repositories>  
+           
+        <pluginRepositories>  
+            <pluginRepository>  
+            <id>nexus</id>  
+            <name>local private nexus</name>  
+            <url>https://maven.oschina.net/content/groups/public/</url>  
+            <releases>  
+                <enabled>true</enabled>  
+            </releases>  
+            <snapshots>  
+                <enabled>false</enabled>  
+            </snapshots>  
+            </pluginRepository>  
+        </pluginRepositories>  
+    </profile>  
+    </profiles>  
+</settings>
